@@ -232,3 +232,16 @@ td {
     padding: 10px 30px;
   }
 }
+
+@media screen and (min-width: 800px) {
+  .container {
+    width: 100vw;
+    background-color: var(--Stone-100);
+  }
+  .recipe-container {
+    width: 40vw;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 10px;
+  }
+}
