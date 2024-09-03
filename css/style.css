@@ -22,6 +22,7 @@ body {
 }
 
 .container {
+  margin: 0px;
   display: flex;
   width: 100vw;
 }
@@ -101,10 +102,24 @@ img {
 .ingredients ul {
   padding-left: 20px;
   margin-top: 0px;
+  line-height: 2;
+}
+
+.ingredients li::marker {
+  color: var(--Brown-800);
+  font-weight: 700;
 }
 
 .instructions {
   border-bottom: 0.5px solid var(--Stone-600);
+}
+
+.instructions ol {
+  margin-left: -15px;
+}
+
+.instructions li {
+  line-height: 1.5;
 }
 
 .instructions li::marker {
@@ -121,7 +136,7 @@ img {
 
 tr {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   padding: 10px 20px;
   border-bottom: 0.5px solid var(--Stone-600);
   text-align: left;
@@ -142,58 +157,6 @@ td {
   font-weight: 700;
   color: var(--Brown-800);
 }
-/* 
-tbody {
-  display: flex;
-  flex-direction: row;
-}
-
-tr {
-  display: flex;
-  flex-direction: row;
-}
-
-th {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  font-family: "Outfit", serif;
-  font-weight: 400;
-}
-
-td {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  font-family: "Outfit", serif;
-  font-weight: 700;
-  color: var(--Brown-800);
-} */
-
-/* thead th:nth-child(1) {
-  width: 30%;
-}
-
-thead th:nth-child(2) {
-  width: 20%;
-}
-
-thead th:nth-child(3) {
-  width: 15%;
-}
-
-thead th:nth-child(4) {
-  width: 35%;
-}
-
-th,
-td {
-  padding: 20px;
-} */
 
 .attribution {
   font-size: 11px;
@@ -202,4 +165,70 @@ td {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: 100vw;
+    background-color: var(--Stone-100);
+  }
+  .recipe-container {
+    width: 60vw;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 10px;
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    padding: 20px;
+  }
+
+  img {
+    width: 100%;
+    /* margin: 20px; */
+    border-radius: 10px;
+  }
+
+  .recipe {
+    margin: 10px 50px;
+  }
+
+  .prep {
+    padding: 10px 0 10px 30px;
+  }
+
+  .prep ul {
+    padding: 10px;
+  }
+
+  .prep li {
+    font-size: 18px;
+  }
+  */ .prep h2 {
+    font-size: 24px;
+  }
+
+  .recipe-container p,
+  .recipe-container li {
+    font-size: 18px;
+  }
+
+  .ingredients ul {
+    padding-left: 30px;
+  }
+
+  .instructions ol {
+    margin-left: 0px;
+  }
+
+  .nutrition table {
+    width: 80%;
+  }
+
+  tr {
+    padding: 10px 30px;
+  }
 }
